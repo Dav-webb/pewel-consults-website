@@ -8,5 +8,5 @@ export default defineConfig({
   // must match your repository name exactly (including capitalisation).
   // If you deploy to a user/organization page (e.g. yourname.github.io),
   // change this back to '/'.
-  base: '/pewel-consults-website/',
+
 })

@@ -9,7 +9,7 @@ import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/pewel-consults-website">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>

@@ -1,0 +1,124 @@
+.pw-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.pw-nav-scrolled {
+  border-bottom-color: var(--line);
+  box-shadow: 0 4px 20px -12px rgba(11, 27, 51, 0.15);
+}
+
+.pw-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.pw-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  letter-spacing: 0.02em;
+  color: var(--navy-900);
+  flex-shrink: 0;
+}
+
+.pw-brand-text strong { font-weight: 700; }
+
+.pw-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.pw-link {
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s var(--ease);
+}
+
+.pw-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 2px;
+  background: var(--gold-600);
+  transition: right 0.25s var(--ease);
+}
+
+.pw-link:hover { color: var(--navy-900); }
+.pw-link:hover::after { right: 0; }
+
+.pw-link-active { color: var(--navy-900); font-weight: 600; }
+.pw-link-active::after { right: 0; }
+
+.pw-nav-cta { padding: 10px 20px; font-size: 0.88rem; }
+
+.pw-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pw-burger span {
+  width: 100%;
+  height: 2px;
+  background: var(--navy-900);
+  transition: transform 0.25s var(--ease), opacity 0.2s var(--ease);
+}
+
+.pw-burger-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.pw-burger-open span:nth-child(2) { opacity: 0; }
+.pw-burger-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 991.98px) {
+  .pw-burger { display: flex; }
+
+  .pw-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 24px 26px;
+    border-bottom: 1px solid var(--line);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+  }
+
+  .pw-links-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .pw-link { padding: 14px 0; border-bottom: 1px solid var(--neutral-100); }
+  .pw-link::after { display: none; }
+  .pw-nav-cta { margin-top: 16px; justify-content: center; }
+}

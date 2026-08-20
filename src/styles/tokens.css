@@ -1,0 +1,35 @@
+:root {
+  /* Color system */
+  --navy-950: #071427;
+  --navy-900: #0b1b33;
+  --navy-800: #12294d;
+  --navy-700: #1c3a68;
+  --navy-100: #e9edf5;
+  --ink: #182333;
+  --ink-soft: #4a5568;
+  --paper: #ffffff;
+  --neutral-50: #f6f7fa;
+  --neutral-100: #eef1f6;
+  --neutral-200: #dfe4ec;
+  --gold-500: #f0a93a;
+  --gold-600: #d6871a;
+  --gold-100: #fdf1de;
+  --teal-600: #1f8a70;
+  --line: rgba(11, 27, 51, 0.1);
+  --line-light: rgba(255, 255, 255, 0.14);
+
+  /* Typography */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Layout */
+  --container-w: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(11, 27, 51, 0.06), 0 1px 1px rgba(11, 27, 51, 0.04);
+  --shadow-md: 0 10px 30px -12px rgba(11, 27, 51, 0.25);
+  --shadow-lg: 0 24px 60px -20px rgba(11, 27, 51, 0.35);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}

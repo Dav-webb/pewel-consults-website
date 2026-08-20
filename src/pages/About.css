@@ -1,0 +1,63 @@
+.pw-about-intro {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.pw-about-intro-body p:last-child { margin-bottom: 0; }
+
+.pw-about-illustration {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  line-height: 0;
+}
+
+.pw-about-illustration svg { width: 100%; height: auto; display: block; }
+
+.pw-about-mv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.pw-about-mv-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 38px;
+}
+
+.pw-about-mv-card .tag { margin-bottom: 18px; }
+.pw-about-mv-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+.pw-about-mv-card p { margin: 0; }
+
+.pw-about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.pw-about-value-index {
+  font-family: var(--font-mono);
+  color: var(--gold-600);
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.pw-about-value h3 { margin-bottom: 8px; }
+.pw-about-value p { font-size: 0.92rem; margin: 0; }
+
+@media (max-width: 991.98px) {
+  .pw-about-intro { grid-template-columns: 1fr; gap: 34px; }
+  .pw-about-intro { direction: ltr; }
+  .pw-about-illustration { order: -1; }
+  .pw-about-mv { grid-template-columns: 1fr; }
+  .pw-about-values-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 575.98px) {
+  .pw-about-values-grid { grid-template-columns: 1fr; }
+}

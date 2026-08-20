@@ -1,0 +1,58 @@
+.pw-process .section-head h2,
+.pw-process-title { color: var(--paper); }
+
+.pw-process-eyebrow { color: var(--gold-500); }
+.pw-process-eyebrow::before { background: var(--gold-500); }
+
+.pw-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.pw-process-step {
+  position: relative;
+  padding: 0 26px 0 0;
+}
+
+.pw-process-number {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--gold-500);
+  display: block;
+  margin-bottom: 22px;
+}
+
+.pw-process-step h3 { color: var(--paper); margin-bottom: 6px; }
+
+.pw-process-line {
+  color: var(--gold-500);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.pw-process-step > p:last-child { color: rgba(255,255,255,0.6); font-size: 0.93rem; margin-bottom: 0; }
+
+.pw-process-connector {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 20px;
+  height: 1px;
+  background: var(--line-light);
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .pw-process-connector { display: block; }
+}
+
+@media (max-width: 991.98px) {
+  .pw-process-grid { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+}
+
+@media (max-width: 575.98px) {
+  .pw-process-grid { grid-template-columns: 1fr; }
+}

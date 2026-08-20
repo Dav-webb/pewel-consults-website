@@ -1,0 +1,87 @@
+.pw-project-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.pw-project-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+
+.pw-project-visual {
+  background: var(--navy-900);
+  height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pw-project-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pw-project-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--line-light) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-light) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: 0.5;
+}
+
+.pw-project-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 34px);
+  grid-template-rows: repeat(2, 34px);
+  gap: 8px;
+  position: relative;
+}
+
+.pw-project-visual-grid span {
+  background: var(--gold-500);
+  opacity: 0.85;
+  border-radius: 4px;
+  animation: pw-pulse 2.4s ease-in-out infinite;
+}
+
+.pw-project-visual-grid span:nth-child(2) { background: var(--teal-600); }
+.pw-project-visual-grid span:nth-child(5) { background: var(--teal-600); }
+
+@keyframes pw-pulse {
+  0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
+  50% { transform: scaleY(1); opacity: 0.95; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pw-project-visual-grid span { animation: none; transform: none; opacity: 0.85; }
+}
+
+.pw-project-body { padding: 26px 28px 30px; }
+.pw-project-body h3 { margin: 12px 0 8px; }
+.pw-project-body p { font-size: 0.92rem; margin-bottom: 18px; }
+
+.pw-project-metrics {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.pw-project-metrics li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  background: var(--neutral-50);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  padding: 5px 10px;
+  border-radius: 100px;
+}

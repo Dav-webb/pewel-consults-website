@@ -1,0 +1,24 @@
+.pw-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.pw-portfolio-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 40px 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  background: var(--neutral-50);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+
+.pw-portfolio-note .bi { color: var(--gold-600); margin-top: 2px; flex-shrink: 0; }
+
+@media (max-width: 767.98px) {
+  .pw-portfolio-grid { grid-template-columns: 1fr; }
+}
